@@ -29,7 +29,8 @@ public class Slingshot : MonoBehaviour {
 
 	void OnMouseExit() {
 		//print ("Slingshot:OnMouseExit");
-		launchPoint.SetActive(false);
+		if(!aimingMode)
+			launchPoint.SetActive(false);
 	}
 
 	void OnMouseDown() {
@@ -73,6 +74,7 @@ public class Slingshot : MonoBehaviour {
 			projectile.GetComponent<Rigidbody>().isKinematic = false;
 
 			projectile.GetComponent<Rigidbody>().velocity = - mouseDelta * velocityMult;
+			FollowCam.S.poi = projectile;
 		
 		}
 
