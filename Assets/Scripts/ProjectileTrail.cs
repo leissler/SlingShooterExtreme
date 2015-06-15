@@ -79,7 +79,21 @@ public class ProjectileTrail : MonoBehaviour {
 		
 		lastPoint = pt;
 	}
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public void Clear(){
 		_poi = null;
 		line.enabled = false;
